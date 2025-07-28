@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-17 Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="reference-banner">FOR REFERENCE USE ONLY</div>
+    
+<div class="container">
+    <main>
+        <h1>Cheat Sheet for C-17A Maintainers</h1>
+
+        <!-- Search Section -->
+        <div class="search-container">
+            <div class="search-input-container">
+                <input type="text" id="searchBox" placeholder="Search...">
+                <button onclick="search()" class="search-button">Search</button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+        
+        <!-- Image Links Section -->
+        <div class="image-links-container">
+            <a href="home/Forms.html" class="image-link">
+                <img src="images/forms.png" alt="Forms & AFI's">
+                <span>Forms & AFI's</span>
+            </a>
+            <a href="home/Tasks.html" class="image-link">
+                <img src="images/Tasks.png" alt="Tasks">
+                <span>Tasks</span>
+            </a>
+            <a href="home/Systems Reference.html" class="image-link">
+                <img src="images/Systems Reference.png" alt="Systems Reference">
+                <span>Systems Reference</span>
+            </a>
+            <a href="home/GO81.html" class="image-link">
+                <img src="images/GO81.png" alt="GO81">
+                <span>GO81</span>
+            </a>
+            <a href="home/DTS.html" class="image-link">
+                <img src="images/DTS.png" alt="DTS">
+                <span>DTS</span>
+            </a>        
+            <a href="home/FLTLMaps.html" class="image-link">
+                <img src="images/FLTLMaps.png" alt="Flightline Maps">
+                <span>Flightline Maps</span>
+            </a>  
+            <!-- Add more links as needed -->
+        </div>
+        
+<div id="zuluTimeClock">ZULU Time: </div>
+<div id="julianDate">Julian Date: </div>
+        
+      <p><strong>General Characteristics<br>
+Primary Function: </strong>Cargo and troop transport<br>
+<strong>Prime Contractor:</strong> Boeing Company<br>
+<strong>Power Plant:</strong> Four Pratt &amp; Whitney F117-PW-100 turbofan engines<br>
+<strong>Thrust:</strong> 40,440 pounds, each engine<br>
+<strong>Wingspan:</strong> 169 feet 10 inches (to winglet tips) (51.75 meters)<br>
+<strong>Length:</strong> 174 feet (53 meters)<br>
+<strong>Height:</strong> 55 feet 1 inch (16.79 meters)<br>
+<strong>Cargo Compartment:</strong> length, 88 feet (26.82 meters); width, 18 feet (5.48 meters); height, 12 feet 4 inches (3.76 meters)<br>
+<strong>Speed:</strong> 450 knots at 28,000 feet (8,534 meters) (Mach .74)<br>
+<strong>Service Ceiling:</strong> 45,000 feet at cruising speed (13,716 meters)<br>
+<strong>Range:</strong> Global with in-flight refueling<br>
+<strong>Crew:</strong> Three (two pilots and one loadmaster)<br>
+<strong>Aeromedical Evacuation Crew: </strong>A basic crew of five (two flight nurses and three medical technicians) is added for aeromedical evacuation missions. Medical crew may be altered as required by the needs of patients<br>
+<strong>Maximum Takeoff Weight:</strong> 585,000 pounds (265,352 kilograms)<br>
+<strong>Load:</strong> 102 troops/paratroops; 36 litter and 54 ambulatory patients and attendants; 170,900 pounds (77,519 kilograms) of cargo (18 pallet positions)<br>
+<strong>Unit Cost:</strong> $202.3 million (fiscal 1998 constant dollars)<br>
+<strong>Date Deployed:</strong> June 1993<br>
+<strong>Inventory:</strong> Active duty, 157; Air National Guard, 47; Air Force Reserve, 18</p>
+    </main>
+</div>
+
+<script src="Zulu-Julian-utility.js"></script>
+    
+  
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
+
+

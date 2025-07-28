@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TESTING PAGE (% MAC)</title>
+<link rel="stylesheet" href="style.css">
+  
+  <script>
+      function calculateTotal() {
+          // Retrieve the values from the input boxes and parse them as integers
+          var tank1 = parseInt(document.getElementById('tank1').value) || 0;
+          var tank2 = parseInt(document.getElementById('tank2').value) || 0;
+          var tank3 = parseInt(document.getElementById('tank3').value) || 0;
+          var tank4 = parseInt(document.getElementById('tank4').value) || 0;
+          var acftWeight = parseInt(document.getElementById('acftWeight').value) || 0;
+
+          // Calculate the total fuel weight
+          var totalFuelWeight = tank1 + tank2 + tank3 + tank4;
+
+          // Calculate the total aircraft weight
+          var totalAcftWeight = totalFuelWeight + acftWeight;
+
+        // Display the results
+          document.getElementById('totalFuelWeight').value = totalFuelWeight;
+          document.getElementById('totalAcftWeight').value = totalAcftWeight;
+      }
+
+      // Function to allow only numeric input
+      function allowNumericInput(e) {
+          // Allow: backspace, delete, tab, escape, enter, and numeric keys
+          if (e.key.length === 1 && !e.key.match(/[0-9]/)) {
+              e.preventDefault();
+          }
+      }
+
+      // Attach the event listener to input fields
+      window.onload = function() {
+          document.getElementById('tank1').addEventListener('keypress', allowNumericInput);
+          document.getElementById('tank2').addEventListener('keypress', allowNumericInput);
+          document.getElementById('tank3').addEventListener('keypress', allowNumericInput);
+          document.getElementById('tank4').addEventListener('keypress', allowNumericInput);
+          document.getElementById('acftWeight').addEventListener('keypress', allowNumericInput);
+      }
+  </script>
+  
+</head>
+<body>
+  <div class="home-button-container">
+    <a href="index.html" class="home-button">Home</a>
+  </div>
+  <div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  <h1>TESTING PAGE (% MAC)</h1>
+  <h2>How to find % MAC</h2>
+  <h3>(No Cargo Onboard)</h3>
+
+  <form>
+    <li>Record the fuel loads for each tank.</li>
+      <div class="input-container">
+          <label for="tank1">Tank 1:</label>
+          <input type="tel" id="tank1" name="tank1" oninput="calculateTotal()">
+      </div>
+
+      <div class="input-container">
+          <label for="tank2">Tank 2:</label>
+          <input type="tel" id="tank2" name="tank2" oninput="calculateTotal()">
+      </div>
+
+      <div class="input-container">
+          <label for="tank3">Tank 3:</label>
+          <input type="tel" id="tank3" name="tank3" oninput="calculateTotal()">
+      </div>
+
+      <div class="input-container">
+          <label for="tank4">Tank 4:</label>
+          <input type="tel" id="tank4" name="tank4" oninput="calculateTotal()">
+      </div>
+
+      <div class="input-container">
+          <label for="totalFuelWeight">Total Fuel Weight:</label>
+          <input type="text" id="totalFuelWeight" name="totalFuelWeight" readonly>
+      </div>
+
+      <div class="input-container">
+          <label for="acftWeight">Look at Chart C to find ACFT Weight:</label>
+          <input type="tel" id="acftWeight" name="acftWeight" oninput="calculateTotal()">
+      </div>
+
+      <div class="input-container">
+          <label for="totalAcftWeight">Total ACFT Weight:</label>
+          <input type="text" id="totalAcftWeight" name="totalAcftWeight" readonly>
+      </div>
+  </form>
+
+  
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

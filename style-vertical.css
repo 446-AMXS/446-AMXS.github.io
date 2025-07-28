@@ -1,0 +1,233 @@
+/* Reset basic styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Apply flex layout to a container instead of body to avoid global layout changes */
+.container {
+  display: flex;
+  flex-direction: row; /* Aligns nav and main in a row for larger screens */
+  width: 100%; /* Ensures the container spans the full width */
+}
+
+/* Header styles */
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1em; }
+
+/* Navigation styles */
+nav {
+  margin: 0;
+  padding: 0.5em;
+  width: 200px; /* Fixed width for the nav */
+  background-color: #f2f2f2;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0.5em 0;
+}
+
+nav a:hover {
+  background-color: lightgray;
+}
+
+/* Main content adjustments */
+main {
+  flex-grow: 1; /* Allows main content to expand */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-aligns the flex items (children of main) */
+  padding: 1em;
+}
+
+/* Image Links Container adjustments for vertical layout */
+.image-links-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 30px; /* Increased space for larger items */
+}
+
+.image-links-container img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Ensures images are block level, which can help with layout */
+}
+
+/* Adjustments for individual links and images for a larger display */
+.image-link {
+  width: auto; /* Adjust width based on content */
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.image-link img {
+  width: 150px; /* Default size for images, adjust if needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.image-link span {
+  color: black; /* Text color */
+  text-align: center; /* Center the text */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .image-link img {
+    width: 75%; /* Images take up 75% of screen width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1em;
+  font-size: 0.8em;
+  width: 100%;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  body, nav {
+    background-color: #0c0c0c;
+    color: #FFFFF0;
+  }
+
+  nav a, .image-link span {
+    color: #ccc;
+  }
+
+  nav a:hover {
+    background-color: #444;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column; /* Stacks nav and main vertically on small screens */
+  }
+
+  nav {
+    width: 100%; /* Allows nav to span the full width of the screen */
+    order: -1; /* Places nav above main content */
+  }
+}
+
+/* Home button styles */
+.home-button-container {
+  position: fixed; /* Adjusted for fixed positioning relative to viewport */
+  top: 1px; /* Aligned with the banner */
+  right: 10px; /* Distance from the right of the viewport */
+  z-index: 1001; /* Ensures it's above the banner */
+}
+
+.home-button {
+  display: inline-block;
+  padding: 1px 20px;
+  text-decoration: none;
+  background-color: #f2f2f2;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: lightgray;
+}
+
+@media (max-width: 600px) {
+  .home-button-container {
+    position: fixed;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .home-button {
+    padding: 8px 16px;
+  }
+}
+
+.reference-banner {
+  background-color: #0e600e; /* Sets the background color */
+  color: #FFFFFF; /* Sets the text color */
+  text-align: center; /* Centers the text */
+  width: 100%; /* Ensures the banner spans the full width */
+  padding: 10px 0; /* Adds some padding above and below the text */
+  margin-top: 0; /* Removes the default top margin */
+  position: fixed; /* Fixes the header at the top of the page */
+  top: 0; /* Aligns the banner at the very top */
+  left: 0; /* Aligns the banner to the left */
+  z-index: 1000; /* Ensures the banner appears above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Adds a shadow for depth */
+}
+
+/* DTS styles */
+.DTS-list, .DTS-list ul {
+    list-style-type: none; /* Removes default list bullets */
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Style for top-level li elements with the arrow */
+.DTS-list > li {
+    margin: 5px 0;
+    position: relative;
+    padding-left: 15px; /* provide space for the arrow */
+}
+
+.DTS-list > li::before {
+    content: "→\00a0"; /* Arrow with a non-breaking space for gap */
+    position: absolute;
+    left: 0;
+    color: black; /* Change color as needed */
+}
+
+/* Style for nested ul elements */
+.DTS-list > li > ul {
+    padding-left: 20px; /* Indentation for nested lists */
+}
+
+/* Style for nested ul/li elements with the bullet circle */
+.DTS-list ul {
+    padding-left: 20px; /* Indentation for nested lists */
+}
+
+.DTS-list ul > li {
+    list-style-type: circle; /* Adds bullet circle */
+    margin-left: 5px; /* Align with the parent li */
+}
+
+/* Adjust the h2 for trip overview to not have any list-style */
+.section-header {
+    padding-left: 0;
+    margin-bottom: 10px; /* Spacing after the title */
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .DTS-list > li::before {
+        color: white; /* Bullet point color for dark mode */
+    }
+}
+
+/* Optional: Container adjustments, if you have a container element */
+.container { /* Adjust the class name as per your HTML */
+    width: 100%; /* Adjust width as necessary, ensures it takes full width if needed */
+    margin: 0 auto; /* Center container, adjust or remove if not needed */
+    text-align: left; /* Ensure content inside the container aligns left */
+}
