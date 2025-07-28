@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>781 H</title>
+<link rel="stylesheet" href="../custom-table.css">
+
+</head>
+  
+<body>
+  <div class="home-button-container">
+    <a href="../index.html" class="home-button">Home</a>
+  </div>
+  <div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  
+  <h1>781 H</h1>
+  <h2>Header Information</h2>
+  <table>
+    <tr>
+    <th>FROM</th>
+    <td>Date on the first page of A's.
+      <br>Formatted as YYYYMMDD</td>
+  </tr>
+  <tr>
+    <th>TO</th>
+    <td>Blank until transcribed</td>
+  </tr>
+  <tr>
+    <th>MDS</th>
+    <td>Model of aircraft (C-17A)</td>
+  </tr>
+  <tr>
+    <th>SERIAL NUMBER</th>
+    <td>Tail Number of Aircraft - Ex: 09-9211</td>
+  </tr>
+    <!-- Repeat the above two lines for each row in your table, replacing FROM and the description with the appropriate content. -->
+  </table>
+
+  <h2>Aircraft Health Information</h2>
+  <table>
+    <tr>
+      <th>TYPE</th>
+      <td>Inspection Accomplished: Preflight (PR), (PR/BPO), Thruflight (TH)
+      </td>
+    </tr>
+    <tr>
+      <th>ACCOMPLISHED BY</th>
+      <td>Minimum Signature - First initial last name Ex. Jdoe</td>
+    </tr>
+    <tr>
+      <th>COMPLETED DATE</th>
+      <td>Enter date - Formatted as YYYYMMDD</td>
+    </tr>
+    <tr>
+      <th>TIME</th>
+      <td>Time inspection completed - Formatted in 24 hour clock and on Zulu time.</td>
+    </tr>
+    <tr>
+      <th>STATUS TODAY</th>
+      <td>Enter the highest discrepancy in the 781A and K.
+        <br>
+      <span class="red-text">Red X</span>- Most serious condition.
+        <br>
+      <span class="red-text">Dash</span>- Less serious than X, more serious than Diagonal.
+        <br>
+      <span class="red-text">Diagonal</span> - Least serious condition.
+      </td>
+    </tr>
+    <tr>
+      <th>BOX NO</th>
+      <td>Used to record the box number of the STATUS TODAY column for an exceptional/conditional release is being signed.</td>
+    </tr>
+    <tr>
+      <th>EXCEPTIONAL RELEASE</th>
+      <td>Required before flight. Will not be signed if there is a current X. 
+    </tr>
+    <tr>
+      <th>AIRFRAME TIME</th>
+      <td>Upon initiation of a new form, transcribe the total time from the TOTAL block of the previous form to the PREVIOUS block of the new form.
+        <br>
+        <br>
+      Ensure airframe time is updated in the Form 781 J.</td>
+    </tr>
+    <tr>
+      <th>LANDINGS</th>
+      <td>Upon initiation of a new form, transcribe the previous FULL STOP, TOTAL and LANDING GEAR CYCLES.
+        <br>
+        <br>
+        Aircrew will document the applicable criteria.
+      </td>
+    </tr>
+    <tr>
+      <th>CART/JFS STARTS</th>
+      <td>Aircrew will document this as applicable.</td>
+    </tr>
+    <tr>
+      <th>ENGINE CYCLE DOCUMENTATION:</th>
+      <td>Aircrew will document this as applicable.</td>
+    </tr>
+    <tr>
+      <th>SERVICING DATA</th>
+      <td>Encompasses Fuel, Oil, Oxy, Nitrogen and Water.</td>
+    </tr>
+    <tr>
+      <th>OCTANE or GRADE</th>
+      <td>Enter the fuel grade/octane that was serviced. 
+        <br>
+        Ex: JP-8 or JET A
+      </td>
+    </tr>
+    <tr>
+      <th>QTY SRVCD</th>
+      <td>Enter total quantity of fuel serviced or drained at on operation, followed by P (pounds) or G (gallons).</td>
+    </tr>
+    <tr>
+      <th>TOTAL IN TANKS</th>
+      <td>Upon completion of servicing/draining/in tank check, enter the total number of P or G of fuel onboard in all tanks.</td>
+    </tr>
+    <tr>
+      <th>OIL</th>
+      <td>Line out all but applicable words from the title of this column.
+        <br>
+      Ex: <span class="strike-through">Half pints, pints,</span> quarts, <span class="strike-through"> gallons or liters</span>
+        <br>
+        <br>
+      In the SER column, enter the number of units serviced. Then record the total number of oil in each tank.
+        <br>
+        <br>
+      If no servicing was conducted, enter a black dash ( - )
+        <br>
+      If no servicing was required during checks, enter a zero ( 0 )
+      </td>
+    </tr>
+    <tr>
+      <th>OXY PRESS OR QTY</th>
+      <td>Line out the non-applicable portion of the title.
+        <br>
+      Enter the pressure/quantity serviced
+        <br>
+        <br>
+      If no check is required, enter a dash.</td>
+    </tr>
+    <tr>
+      <th>NITROGEN/WATER</th>
+      <td> </td>
+    </tr>
+    <tr>
+      <th>PRE TOT</th>
+      <td>When transcribing, this row is used to record the current quantities from the previous form. Line through ALL servicing blocks.</td>
+    </tr>
+    <tr>
+      <th>SERVICING CERTIFICATION</th>
+      <td>The individual who performs or supervises the servicing enters their Information.</td>
+    </tr>
+    <tr>
+      <th>BY</th>
+      <td>Minimum Signature - First initial last name Ex. Jdoe</td>
+    </tr>
+    <tr>
+      <th>AT</th>
+      <td>Station name the action was performed</td>
+    </tr>
+    <tr>
+      <th>DATE</th>
+      <td>Date the action was performed</td>
+    </tr>
+    <!-- Repeat for each row... -->
+  </table>
+
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

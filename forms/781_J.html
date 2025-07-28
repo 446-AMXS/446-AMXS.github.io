@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>781 J</title>
+<link rel="stylesheet" href="../custom-table.css">
+</head>
+<body>
+  <div class="home-button-container">
+    <a href="../index.html" class="home-button">Home</a>
+  </div>
+  <div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  <h1>781 J</h1>
+  <h2>Header Information</h2>
+  <table>
+    <tr>
+    <th>FROM</th>
+    <td>Date on the first page of A's. - Formatted as YYYYMMDD</td>
+  </tr>
+  <tr>
+    <th>TO</th>
+    <td>Blank until transcribed</td>
+  </tr>
+  <tr>
+    <th>MDS</th>
+    <td>Model of aircraft (C-17A)</td>
+  </tr>
+  <tr>
+    <th>SERIAL NUMBER</th>
+    <td>Tail Number of Aircraft - Ex: 09-9211</td>
+  </tr>
+  <tr>
+    <th>Page _ of _ Pages</th>
+    <td>Page number of total pages (pages is left blank until transcribed)</td>
+  </tr>
+    <!-- Repeat the above two lines for each row in your table, replacing FROM and the description with the appropriate content. -->
+  </table>
+
+  <h2>AIRCRAFT AND ENGINE OPERATING TIME, CYCLE AND OIL ADDED</h2>
+  <table>
+    <tr>
+      <th>DATE</th>
+      <td>Enter the date on which the aerospace vehicle flies in the first open line.
+      </td>
+    </tr>
+    <tr>
+      <th>AIRFRAME TIME</th>
+      <td>When transcribing, the PREVIOUS TOTAL row is used to record the last entry of data documented on the previous 781 J CARRIED FWD row.
+        <br>
+        <br>
+      At the end of the specified flying period, enter the time accrued for that flying period on the line opposite the specific date entry. Add this entry to the previously recorded time to provide new totals.
+      </td>
+    </tr>
+    <tr>
+      <th>OIL SAMPLE (X)</th>
+      <td>Enter an X in this block, on the line corresponding to the specific date entry to indicate that an oil sample was taken for oil analysis.</td>
+    </tr>
+    <tr>
+      <th>OIL ADDED</th>
+      <td>In the OIL ADDED column of the PREVIOUS TOTAL row, enter the total amounts of oil added in Quarts (Q), as reflected on the last entry of the previous AFTO Form 781J</td>
+    </tr>
+    <tr>
+      <th>OIL CONSUMPTION</th>
+      <td>Optional Column. If used, enter the oil consumption rate (Qts/Hr) after each flight completion and calculate the oil consumption total after obtaining individual engine flight consumption rates.</td>
+    </tr>
+    <tr>
+      <th>ENGINE POS #</th>
+      <td>The first engine ENGINE POS # column is for engine number 1, the second is for engine number 2 and so on.</td>
+    </tr>
+    <tr>
+      <th>OIL CHANGE/TIME</th>
+      <td>Enter the engine time at the last oil change 
+      </td>
+    </tr>
+    <tr>
+      <th>ENGINE TIME and CYCLES</th>
+      <td>Engine time will reflect engine total hours accumulated throughout the life of the engine.</td>
+    </tr>
+    <tr>
+      <th>CARRIED FWD</th>
+      <td>When all rows are filled, total all columns in the appropriate blocks in the CARRIED FWD row.
+        <br>
+        <br>
+      Carry these individual totals along with other applicable data forward  </td>
+    </tr>
+    <!-- Repeat for each row... -->
+  </table>
+
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

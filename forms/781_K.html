@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>781 K</title>
+<link rel="stylesheet" href="../custom-table.css">
+</head>
+<body>
+  <div class="home-button-container">
+    <a href="../index.html" class="home-button">Home</a>
+  </div>
+  <div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  <h1>781 K</h1>
+  <h2>Header Information</h2>
+  <table>
+    <tr>
+    <th>FROM</th>
+    <td>Date on the first page of A's. - Formatted as YYYYMMDD</td>
+  </tr>
+  <tr>
+    <th>TO</th>
+    <td>Blank until transcribed</td>
+  </tr>
+  <tr>
+    <th>MDS</th>
+    <td>Model of aircraft (C-17A)</td>
+  </tr>
+  <tr>
+    <th>SERIAL NUMBER</th>
+    <td>Tail Number of Aircraft - Ex: 09-9211</td>
+  </tr>
+    <!-- Repeat the above two lines for each row in your table, replacing FROM and the description with the appropriate content. -->
+  </table>
+
+  <h2>Form Data</h2>
+  <table>
+    <tr>
+      <th>NEXT PERIODIC, MAJOR OR PHASED INSPECTION DUE NO.</th>
+      <td>Document the number and type of the next inspection due.
+      </td>
+    </tr>
+    <tr>
+      <th>TYPE</th>
+      <td>Type of inspections involved - 
+        <br>
+      Ex: Home Station Check (HSC) and Hourly Post-flight (HPO).</td>
+    </tr>
+    <tr>
+      <th>COMPL</th>
+      <td>Airframe time or date an inspection was completed.</td>
+    </tr>
+    <tr>
+      <th>NEXT DUE</th>
+      <td>Airframe time or date an inspection is next due.
+        <br>
+        <br>
+        Upon completion of the prescribed inspection listed in this block, line out the old COMPL and the NEXT DUE entries and enter the new COMPL and NEXT DUE time.</td>
+    </tr>
+    <tr>
+      <th>ENG SER NO</th>
+      <td>The serial number of each engine in the box to the right of the applicable number that denotes the position in which each engine is installed.</td>
+    </tr>
+    <tr>
+      <th>ENG CHANGE DUE TIME</th>
+      <td>Enter the aerospace vehicle/engine time at which the next engine change is due.</td>
+    </tr>
+    <tr>
+      <th>INSPECTION ITEM</th>
+      <td>tems that are to be inspected or tested</td>
+    </tr>
+    <tr>
+      <th>FREQUENCY</th>
+      <td>Specific hourly or calendar period</td>
+    </tr>
+    <tr>
+      <th>NEXT DUE</th>
+      <td>Annotate when the next inspection, calendar or hourly, is due</td>
+    </tr>
+    <tr>
+      <th>SYM</th>
+      <td>nter symbol to reflect the seriousness of the discrepancy. Cannot enter <span class="red-text">RED X</span> in K's</td>
+    </tr>
+    <tr>
+      <th>JOB CONTROL NUMBER</th>
+      <td>The assigned JCN</td>
+    </tr>
+    <tr>
+      <th>DELAYED DISCREPANCIES OR TCTO NUMBER AND PUBLICATION DATE</th>
+      <td>Enter the delayed discrepancy (DD) narrative or TCTO number date, and short title.
+        <br>
+        <br>
+      When DD's are added for reasons other than awaiting parts, enter a brief explanation.</td>
+    </tr>
+    <tr>
+      <th>DOCUMENT NUMBER</th>
+      <td>Enter the supply document number if applicable.</td>
+    </tr>
+    <tr>
+      <th>GROUND DATE/TIME</th>
+      <td>TCTO grounding date or airframe time as applicable.</td>
+    </tr>
+    <tr>
+      <th>TRANSFER BY EMPLOYEE NUMBER</th>
+      <td>5 digit employee number of the member transferring the DD to the 781 A.
+        <br>
+      Only filled when DD is transferred.
+</td>
+    </tr>
+    <!-- Repeat for each row... -->
+  </table>
+
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
