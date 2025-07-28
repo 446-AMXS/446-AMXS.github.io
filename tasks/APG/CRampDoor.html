@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargo Ramp/Door Operation</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="home-button-container">
+    <a href="/index.html" class="home-button">Home</a>
+  </div> 
+  <div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  
+  <main>
+    <h1>Cargo Ramp and Door Open/Close</h1>
+    <!-- Add your checklist structure here -->
+
+    <div class="checklist">
+      <h2>C-17 S1000D IETM</h2>
+      <ul class="ietm-list">
+        <li>
+          Job Guides
+          <ul>
+            <li>
+              <strong>52 Doors</strong>
+              <ul>
+                  <li>
+                    <em>52-30 - Cargo</em>
+                    <ul>
+                      <li>
+                        &diams; Cargo Ramp and Cargo Door Open/Close (52-30-02)
+                        <ul>
+                          <li>→ (02-1.-Open Cargo Ramp AFT Loadmasters Station)</li>
+                          <li>→ (02-1.-Close Cargo Ramp AFT Loadmasters Station)</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="/imageToggle.js"></script>
+  
+  
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACFT Tire Servicing</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="home-button-container">
+    <a href="/index.html" class="home-button">Home</a>
+  </div> 
+  <div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  
+  <main>
+    <h1>ACFT Tire Servicing</h1>
+    <!-- Add your checklist structure here -->
+
+    <div class="checklist">
+      <h2>C-17 S1000D IETM</h2>
+      <ul class="ietm-list">
+        <li>
+          Job Guides
+          <ul>
+            <li>
+              <strong>12 Servicing</strong>
+              <ul>
+                  <li>
+                    <em>12-32 - Landing Gear</em>
+                    <ul>
+                      <li>
+                        &diams; <span class="toggleText" style="cursor: pointer;">Aircraft tire serving <em>(Click for Inflation Criteria)</em></span>
+                        <ul>
+                          <li class="imageToggle" style="display: none;">
+                            <img src="/images/MLG_NLG_Tires.jpg" alt="Tire Servicing" style="width: 100%;"/>
+                          </li>
+                          <li>→ (03-1.-MLG SS Aircraft Tire Servicing)</li>
+                          <button class="toggleButton">Show/Hide Required Tools/Supplies</button>
+                          <table class = "hidden">
+                            <tr>
+                              <th>Tools/Supplies</th>
+                              <th>Part Number</th>
+                              <th>NSN/Spec</th>
+                              <th>Qty</th>
+                            </tr>
+                              <tr>
+                              <td>Cart, Nitrogen Servicing (Primary)</td>
+                              <td>1.2K-AV-04</td>
+                              <td>-</td>
+                              <td>1</td>
+                            </tr>
+                            </tr>
+                              <tr>
+                              <td>Cart, Nitrogen Servicing (Alternate)</td>
+                              <td>791600-001</td>
+                              <td>-</td>
+                              <td>1</td>
+                            </tr>
+                            </tr>
+                              <tr>
+                              <td>Inflator Assembly, Tire</td>
+                              <td>M85352/5</td>
+                              <td>-</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 25px;">Gauge, Pressure</td>
+                              <td>1081</td>
+                              <td>-</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 25px;">Valve, Pressure Relief</td>
+                              <td>1084</td>
+                              <td>169 PSI</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 25px;">Valve, Pressure Relief</td>
+                              <td>1084</td>
+                              <td>189 PSI</td>
+                              <td>1</td>
+                            </tr>
+                          </table>
+                          <li>▪ (WUC: Servicing - 01027)</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="/imageToggle.js"></script>
+  
+  
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

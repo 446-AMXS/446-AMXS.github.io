@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flap Operation</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="home-button-container">
+    <a href="/index.html" class="home-button">Home</a>
+  </div> 
+  <div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  
+  <main>
+    <h1>Flap Operation</h1>
+    <!-- Add your checklist structure here -->
+
+    <div class="checklist">
+      <h2>C-17 S1000D IETM</h2>
+      <ul class="ietm-list">
+        <li>
+          Job Guides
+          <ul>
+            <li>
+              <strong>27 Flight Controls</strong>
+              <ul>
+                  <li>
+                    <em>27-50 - Flaps</em>
+                    <ul>
+                      <li>
+                        &diams;Flaps system operation (27-50-03)
+                        <ul>
+                          <li>→ (03-1.- Flap/Slat Operation)</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="/imageToggle.js"></script>
+  
+  
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

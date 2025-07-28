@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Point Refueling Checklist</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="home-button-container">
+    <a href="/index.html" class="home-button">Home</a>
+  </div> 
+  <div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  
+  <main>
+    <h1>Single Point Refueling Checklist</h1>
+    <!-- Add your checklist structure here -->
+    <div class="checklist">
+      <h2>C-17 S1000D IETM</h2>
+      <ul class="ietm-list">
+        <li>
+          Job Guides
+          <ul>
+            <li>
+              <strong>12 Servicing</strong>
+              <ul>
+                  <li>
+                    <em>12-28 - Fuel</em>
+                    <ul>
+                      <li>
+                        &diams; Single Point Refueling Checklist
+                        <ul>
+                          <li>→ (01-1.-Prep w/ aux/APU power)</li>
+                          <li>→ (01-3.-SPR Quantity Select)</li>
+                          <li>→ (01-4.-SPR High Level)</li>
+                          <li>→ (01-6.-Follow on Mx aux/APU power)</li>
+                        <button class="toggleButton">Show/Hide Required Tools/Supplies</button>
+                        <table class = "hidden">
+                          <tr>
+                            <th>Tools/Supplies</th>
+                            <th>Part Number</th>
+                            <th>NSN/Spec</th>
+                            <th>Qty</th>
+                          </tr>
+                          <tr>
+                            <td>Container, Fuel</td>
+                            <td>-</td>
+                            <td>TO 00-25-172</td>
+                            <td>AR</td>
+                          </tr>
+                          <tr>
+                            <td>Pin Ground Safety, Landing Gear</td>
+                            <td>17G13002-1</td>
+                            <td>--</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>Pin Ground Safety, Landing Gear</td>
+                            <td>17G13002-501</td>
+                            <td>--</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>Fluid, Hydraulic</td>
+                            <td>--</td>
+                            <td>MIL-H-83282</td>
+                            <td>AR</td>
+                          </tr>
+                          <tr>
+                            <td>Rags, Wiping</td>
+                            <td>--</td>
+                            <td>A-A-2522</td>
+                            <td>AR</td>
+                          </tr>
+                        </table>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>      
+  </main>
+
+  <script src="/imageToggle.js"></script>
+  
+  
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
