@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GO81</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="home-button-container">
+  <a href="/index.html" class="home-button">Home</a>
+</div>
+<div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  <h1>GO81 Help Page</h1>
+
+  <nav>
+    <a href="#">8020
+      <br> Operational Status of All Aircraft
+    </a>
+    <a href="#">8035
+      <br> Workable Discrepancies
+    </a>
+    <a href="#">8044
+      <br> Open Supply Records Off Base Parts
+    </a>
+    <a href="#">8057
+      <br> TNB
+    </a>
+    <a href="#">8063
+      <br> Previous Day Closed Discrepancies Without MDC
+    </a>
+    <a href="#">9010
+      <br> Closed Aircraft Discrepancies
+    </a>
+    <a href="#">9032
+      <br> Batch Runs 781A / 781K
+    </a>
+    <a href="#">9032D
+      <br> 115 (Option E)
+    </a>
+    <a href="#">9032F
+      <br> Flying Forms
+    </a>
+    <a href="#">9119
+      <br> Training Information
+    </a>
+    <a href="#">9128
+      <br> 350 Tags
+    </a>
+  </nav>
+
+  <main>
+    <p></p>
+  </main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="stylesheet" href="/style-vertical.css"> <!-- Vertical styles -->
+</head>
+<body>
+<div class="home-button-container">
+  <a href="/index.html" class="home-button">Home</a>
+</div>
+<div class="reference-banner">FOR REFERENCE USE ONLY</div>
+    
+<div class="container">
+    <main>
+        <h1>Air Force Flightlines</h1>
+
+        <!-- Image Links Section -->
+        <div class="image-links-container">
+            <a href="../maps/McChord.html" class="image-link">
+                <img src="../images/JBLM.jpg" alt="McChord AFB">
+                <span>McChord AFB</span>
+            </a>
+            <a href="../maps/Hickam.html" class="image-link">
+                <img src="../images/Hickam.jpg" alt="Hickam AFB">
+                <span>Hickam AFB</span>
+            </a>
+            <!-- Add more links as needed -->
+        </div>
+    </main>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>

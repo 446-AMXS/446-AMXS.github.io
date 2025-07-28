@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Systems Reference</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="home-button-container">
+  <a href="/index.html" class="home-button">Home</a>
+</div>
+<div class="reference-banner">FOR REFERENCE USE ONLY</div>
+  
+  <h1>Systems Reference</h1>
+
+  <nav>
+    <a href="#">Circuit Breakers</a>
+    <a href="#">Test Equipment</a>
+    <a href="/system_ref/Hyd_Sys.html">Hydro Systems</a>
+    <a href="/system_ref/Ref_Des.html">Ref Des</a>
+    <a href="/system_ref/MESL.html">C-17 Mission Essential System List</a>
+    <a href="/system_ref/AVI_F.html">Avionics Fault List</a>
+    <a href="/system_ref/NonAVI_F.html">Non-Avionics Fault List</a>
+    <a href="/system_ref/Nuisance_A.html">Nuisance Alerts</a>
+    <a href="/system_ref/Nuisance_F.html">Nuisance Faults</a>
+    <a href="/system_ref/Hydro_Leaks.html">Hydro Leak Limits</a>
+    <a href="#">Static Display</a>
+    <a href="#">FCC Quick Guide</a>
+  </nav>
+
+  <main>
+    <p></p>
+  </main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>

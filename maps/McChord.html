@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McChord Maps</title>
+    <link rel="stylesheet" href="../style-vertical.css"> <!-- Vertical styles -->
+</head>
+<body>
+<div class="home-button-container">
+  <a href="../index.html" class="home-button">Home</a>
+</div>
+<div class="reference-banner">FOR REFERENCE USE ONLY</div>
+    
+<div class="container">
+    <main>
+        <h1>McChord Flightline</h1>
+
+        <!-- Image Links Section -->
+        <div class="image-links-container">
+            <img src="../images/McChord Airfield Entry Points.jpg" alt="Entry Points">
+            <span>Entry Points</span>
+            <img src="../images/McChord Parking ApronsPads.jpg" alt="Parking Aprons/Pads">
+            <span>Parking Aprons/Pads</span>
+            <img src="../images/McChord Restricted Areas.jpg" alt="Restricted Areas">
+            <span>Restricted Areas</span>
+            <img src="../images/McChord Controlled Movement Areas.jpg" alt="Controlled Movement Areas">
+            <span>Controlled Movement Areas</span>
+            <img src="../images/McChord Instrument Critical Areas.jpg" alt="Instrument Critical Areas">
+            <span>Instrument Critical Areas</span>
+            <img src="../images/McChord Hold Lines.jpg" alt="Hold Lines">
+            <span>Hold Lines</span>
+            <!-- Add more links as needed -->
+        </div>
+    </main>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("/automation/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>
